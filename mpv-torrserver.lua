@@ -17,7 +17,7 @@ local function post_torrent(url)
         "-H",
         "Content-Type: multipart/form-data",
         "-F",
-        "file=@"..url
+        "file=@\""..url.."\""
     }
     local res, err = mp.command_native({
         name = "subprocess",
